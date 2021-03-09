@@ -1,8 +1,8 @@
 // used Charts.js API which can be found at: https://www.chartjs.org/docs/
 
 document.addEventListener("DOMContentLoaded", function() {
-    const countryString = "http://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php";
-    const stocksURL = "http://www.randyconnolly.com/funwebdev/3rd/api/stocks/history.php?symbol=";
+    const countryString = "https://www.randyconnolly.com/funwebdev/3rd/api/stocks/companies.php";
+    const stocksURL = "https://www.randyconnolly.com/funwebdev/3rd/api/stocks/history.php?symbol=";
     const wrapDiv = document.querySelector("#credits");
     const filterBox = document.querySelector("#filterCompanies");
     const resultsList = document.querySelector("#companyList");
