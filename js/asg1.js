@@ -365,7 +365,8 @@ document.addEventListener("DOMContentLoaded", function() {
     //populates the primary stock information area
     function popStockData(sD) {
         stockDiv.innerHTML = "";
-        const tbl = document.createElement("table");
+        if(sD.length != 0){
+	const tbl = document.createElement("table");
         stockHd = stockHeader();
         tbl.appendChild(stockHd);
         for (stockListing of sD) {
@@ -391,6 +392,12 @@ document.addEventListener("DOMContentLoaded", function() {
             tbl.appendChild(trStockRow);
         }
         stockDiv.appendChild(tbl);
+	}
+	else{
+	const errorElement = document.createElement("h3");
+            errorElement.textContent = "Could not retrieve stock data";
+            stockDiv.appendChild(errorElement);
+	}
     }
 
     //creates the stock information header
@@ -706,6 +713,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //populates the secondary area of the stock table
     function popStockSecondary(sD) {
         stockDivSecondary.innerHTML = "";
+	     if(sD.length != 0){
         let secondaryArray = [
             ["open", generateValArray(sD, "open")], 
             ["close", generateValArray(sD, "close")], 
@@ -768,6 +776,12 @@ document.addEventListener("DOMContentLoaded", function() {
         let avgRow = tbl.rows[3].insertCell(0);
         avgRow.innerHTML = "Average";
         stockDivSecondary.appendChild(tbl);
+	     }
+	    else{
+	const errorElement = document.createElement("h3");
+            errorElement.textContent = "Could not retrieve stock data";
+            stockDivSecondary.appendChild(errorElement);    
+	    }
     }
 
     //generates an array of the given property, for example the volume column for an array of stock data
