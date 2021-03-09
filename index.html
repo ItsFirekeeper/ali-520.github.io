@@ -1,0 +1,101 @@
+<!-- Used general format of Lab10 test your knowledge 5 -->
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8"/>  
+        <title>Assignment 1</title>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDfjr18be2TRw0GoaK6nzcpbs_MQSUzyGc& callback=initMap"></script> 
+        <link rel="stylesheet" href="css/css.css">
+        <script src="https://use.fontawesome.com/d7942d2fd3.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.0.4/echarts.min.js"></script>
+    </head>
+    <body>
+        <main class="container">
+            <div class="section" id="header">
+                <section>
+                    <h2>COMP 3512 Assign1</h2>
+                    <div id="credits">
+                        <h3>Credit</h3>
+                        <i class="fa fa-star inline"></i>
+                    </div>
+                </section>  
+            </div>
+            <div id="mainView" class="showSection">
+                <div class="section" id="list-companies">
+                    <section>
+                        <h2>List of Companies</h2>
+                        <label for="filter" id="filterLabel">Filter:</label>
+                        <input type="text" id="filterCompanies" name="filter"><br>
+                        <button id="popCompanyList">Go</button>
+                        <button id="clearFilter">Clear Filter</button>
+                        <ul id="companyList"></ul>
+                    </section>  	
+                </div>
+                <div class="section" id="company-info">
+                    <section>
+                        <h2>Company Information</h2>
+                        <div id="companyDetails"></div>
+                    </section>  
+                </div>
+                <div class="section" id="map">
+                    <section>
+                        <h2>Map</h2>
+                        <div class="mapSection" id="mapMain"></div>
+                    </section>
+                </div>
+                <div class="section" id="stock-data"><h2>Stocks</h2>
+                    <section>
+                        <button class="toggleChartButton">View Charts</button>
+                        <div id="stockFormDiv"></div>
+                    </section>
+                </div>
+                <div class="section" id="stock-data-secondary">
+                    <h2>Charts</h2>
+                    <section>
+                        <div id="stockFormSecondary"></div>
+                    </section>
+                </div>
+            </div>
+            <div id="chartView" class="hideSection">
+                <div class="section" id="charts">
+                    <h2>Charts</h2>
+                    <section id="graphs">
+                    <div id="bar-div">
+                    </div>
+                    <div id="candle-graph-img">
+                    </div>
+                    <div id="line-div">
+                    </div>
+                    </section>
+                </div>
+                <div class="section" id="compNameSym">
+                    <h2 id="CompanyName-Symbol">Company Name + Symbol</h2>
+                    <section id="company-description">
+                    </section>
+                    <button class="speak-button">Speak</button>
+                    <button class="toggleChartButton">Close</button>
+                </div>
+                <div class="section" id="financials">
+                    <h2>Financials</h2>
+                    <table id="financial-table">
+                        <thead>
+                            <tr>
+                            <th>Year</th>
+                            <th>Revenue</th>
+                            <th>Earnings</th>
+                            <th>Assets</th> 
+                            <th>Liabilities</th> 
+                            </tr>
+                        </thead>
+                        <tbody id="financial-table-body">
+                        
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </main>
+        <script src="js/asg1.js"></script> 
+    </body>
+</html>

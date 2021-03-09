@@ -1,0 +1,301 @@
+/* Used general format of Lab10 test your knowledge 5 */
+
+body {
+    background-color: #d3e0ea;
+    font-family: Open Sans, sans-serif;
+    font-size: 0.8rem;
+}
+
+canvas{
+  background:#fff;
+  width: 1100px !important;
+  height: 400px !important;
+}
+
+#credits h3, #credits i {
+    display: inline;
+}
+
+#charts{
+    height: 900px;
+}
+
+#noFinancialMessage{
+    padding: 100px;
+    font-size: 30px
+    
+}
+#noFinancialMessageLine{
+    padding: 100px;
+    font-size: 30px
+    
+}
+
+#noFinancialMessageTable{
+    padding: 5px;
+    font-size: 20px
+    
+}
+
+.container #mainView, .container #chartView {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 20% 40% auto;
+}
+
+.section {
+    background-color: #94b5c0;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 8px 8px 20px #1a8fc5;
+}
+
+.mapSection {
+    background-color: #94b5c0;
+    border-radius: 5px;
+    padding: 180px;
+    box-shadow: 8px 8px 20px #1a8fc5;
+}
+
+
+#header {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+}
+
+/* Start main section */
+#list-companies {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+    /* height: 750px; */
+}
+
+#map {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    min-height: 300px;
+}
+
+#company-info {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    height: auto;
+}
+
+#stock-data {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#stock-data-secondary {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+}
+/* End main section */
+
+/* Start stock section */
+#charts {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 3;
+}
+
+#compNameSym {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#financials {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 2;
+}
+/* End stock section */
+
+.credit-class {
+    background-color: orange;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#companyList {
+    list-style-type: none;
+    overflow-y: scroll;
+    background-color: white;
+    border: 1px solid black;
+    height: 500px;
+    margin: 0px;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#stockFormDiv {
+  display: block;
+  list-style-type: none;
+  overflow-y: scroll;
+  background-color: white;
+  border: 1px solid black;
+  height: 300px;
+  margin: 0px;
+  padding-left: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#stockFormSecondary {
+  display: block;
+  list-style-type: none;
+  background-color: white;
+  border: 1px solid black;
+  height: 100px;
+  margin: 0px;
+  padding-left: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#financial-table {
+  list-style-type: none;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  background-color: white;
+  border: 2px solid black;
+  height: 300px;
+  margin: 0px;
+  padding-left: 5%;
+  padding-top: 3%;
+  padding-bottom: 1%;
+ border-spacing: 40px 0px;
+}
+
+#companyDetails {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+/* 
+The following code was retrieved from https://epic-spinners.epicmax.co/ 
+All credit goes to Epicmax and Vasili Savitski
+*/
+.orbit-spinner, .orbit-spinner * {
+    box-sizing: border-box;
+  }
+
+  .orbit-spinner {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    perspective: 800px;
+  }
+
+  .orbit-spinner .orbit {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .orbit-spinner .orbit:nth-child(1) {
+    left: 0%;
+    top: 0%;
+    animation: orbit-spinner-orbit-one-animation 1200ms linear infinite;
+    border-bottom: 3px solid #ff1d5e;
+  }
+
+  .orbit-spinner .orbit:nth-child(2) {
+    right: 0%;
+    top: 0%;
+    animation: orbit-spinner-orbit-two-animation 1200ms linear infinite;
+    border-right: 3px solid #ff1d5e;
+  }
+
+  .orbit-spinner .orbit:nth-child(3) {
+    right: 0%;
+    bottom: 0%;
+    animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
+    border-top: 3px solid #ff1d5e;
+  }
+
+  @keyframes orbit-spinner-orbit-one-animation {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes orbit-spinner-orbit-two-animation {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes orbit-spinner-orbit-three-animation {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+/* 
+End of code retrieved from https://epic-spinners.epicmax.co/
+credit to Epicmax and Vasili Savitski
+*/
+
+.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#logoPhoto {
+  max-height: 100px;
+  max-width: 300px;
+  height: auto;
+  width: auto;
+}
+
+.showSection {
+  display: grid !important;
+}
+
+.hideSection {
+  display: none !important;
+}
+
+#companyList #countryItem, #stockFormDiv table tr th {
+  cursor: pointer;
+}
+
+#stockFormDiv table td, #stockFormSecondary table td {
+  text-align: left;
+}
+
+#company-description{
+    font-size: 15px;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+}
+  
+#stockFormDiv table th, #stockFormDiv table td, #stockFormSecondary table th, #stockFormSecondary table td {
+  padding: 0px 10px 0px 10px;
+}
+
+#stockFormDiv table, #stockFormSecondary table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#stockFormDiv table th, #stockFormSecondary table th {
+  padding-bottom: 5px;
+}
